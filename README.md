@@ -4,6 +4,19 @@ Multi-Robot Construction," submitted to DARS2024.
 # About
 Recent work in planning for cooperative mobile robots to assemble a structure much larger than themselves out of only cubic ($1 \times 1 \times 1$) blocks has been termed "the multi-agent collective construction (MACC) problem." In this work, we create a new planner that solves the MACC problem with \emph{cuboid} ($n \times 1 \times 1$)  blocks, which we call the cuboid-MACC problem. In doing so, we can now build structures with hollow features. The cuboid blocks introduce an additional challenge: they impose restrictions on the maneuverability of the robots that carry the blocks. To address cuboid-MACC, we present a novel hierarchical planning approach that handles the maneuverability constraints imposed by cuboid blocks. First, we use $A^*$ to determine a sequence of abstract actions (block placements and removals) to build the structure without planning specific paths for the robots. We nevertheless ensure that such paths will exist through the concept of a reachable abstract action. Next, we identify dependencies between the chosen abstract actions by checking for conflicts between single-agent paths to execute the actions and store the dependencies as an acyclic Action Dependency Graph. Finally, we iterate on the specific paths taken by robots using a low-level multi-agent pathfinding algorithm by suitable modifications to conflict-based search (CBS). We demonstrate our planner on a set of randomly generated structures built with three types of cuboidal blocks. 
 
+# Installation
+## Dependencies
+A conda environment.yml is provided. Requires numpy, scipy, numba, networkx, pyyaml. Saving and loading data files require dill. Visualizations require matplotlib, meshcat, trimesh, and plotly.
+
+The C++ extension modules use pybind11, which you will need to install: https://pybind11.readthedocs.io/en/stable/
+## Compilation
+The high level planner relies on a compiled extension module to compute reachable abstract actions. The source code is in src/assembly/cpp. A Makefile is provided. 
+
+You will need to update MACC_HOME with the correct path to the folder of this repository.
+You will need to update PYBIND_INCLUDE with the correct path to the pybind11 include folder.
+You will need to update PYTHON_INCLUDE with the correct path to the python include folder for your choice of python executable.
+You MAY need to update PYTHON_EXT_SUFFIX depending on your python version and platform.
+
 # Contents
 ## Code
 The code is organized into 5 submodules: assembly, parallelization, path, utility, and visualize. data contains sample test structures.
