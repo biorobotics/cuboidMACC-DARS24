@@ -1,0 +1,98 @@
+computation_time: 6.199476480484009
+cost: 23
+makespan: 17
+schedule:
+  agent0:
+  - t: 0
+    turn: 0
+    x: 7
+    y: 7
+  - t: 1
+    turn: 0
+    x: 7
+    y: 8
+  - t: 2
+    turn: 0
+    x: 7
+    y: 9
+  - t: 3
+    turn: 0
+    x: 7
+    y: 10
+  - t: 4
+    turn: 0
+    x: 7
+    y: 11
+  - t: 5
+    turn: 0
+    x: 7
+    y: 12
+  - t: 6
+    turn: 0
+    x: 7
+    y: 13
+  - t: 7
+    turn: 0
+    x: 7
+    y: 14
+  - t: 8
+    turn: 90
+    x: 7
+    y: 14
+  - t: 9
+    turn: 90
+    x: 8
+    y: 14
+  - t: 10
+    turn: 90
+    x: 9
+    y: 14
+  - t: 11
+    turn: 90
+    x: 10
+    y: 14
+  - t: 12
+    turn: 90
+    x: 11
+    y: 14
+  - t: 13
+    turn: 90
+    x: 12
+    y: 14
+  - t: 14
+    turn: 90
+    x: 13
+    y: 14
+  - t: 15
+    turn: 180
+    x: 13
+    y: 14
+  - t: 16
+    turn: 180
+    x: 13
+    y: 13
+  agent1:
+  - t: 0
+    turn: 90
+    x: 12
+    y: 14
+  - t: 1
+    turn: 90
+    x: 13
+    y: 14
+  - t: 2
+    turn: 90
+    x: 14
+    y: 14
+  - t: 3
+    turn: 0
+    x: 14
+    y: 14
+  - t: 4
+    turn: 0
+    x: 14
+    y: 13
+  - t: 5
+    turn: 0
+    x: 14
+    y: 12
