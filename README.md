@@ -45,7 +45,7 @@ contains structure designs stored as npy files. They can be loaded by assembly.p
 ## Test Data
 The 185 of the test structures from the paper are specified as .npy files in src/data/random_10x10x4_15blocks. The last 15 are the struct_10x10x4_n{i}.npy files in src/data/random.
 
-The structures named struct_10x10x4_n{i}.npy in a folder at path/to/folder (e.g. "cuboidMACC-DARS24/src/data/random") can be processed programmatically by:
+The structures named structure_prefix{i}.npy in a folder at path/to/folder (e.g. "struct_10x10x4_n{i}.npy" in "cuboidMACC-DARS24/src/data/random") can be processed programmatically by:
 
 ```python
   from parallelization import  run_structures
@@ -53,7 +53,7 @@ The structures named struct_10x10x4_n{i}.npy in a folder at path/to/folder (e.g.
   y_dim=10
   z_dim=5
   structure_prefix="struct_10x10x4_n"
-  num_structs=15#processes structures named f"struct_10x10x4_n{i}.npy" for i in range(num_structs)
+  num_structs=15#processes structures named f"{structure_prefix}{i}.npy" for i in range(num_structs)
   time_limit=1000#seconds for a single structure after which we report timeout and move to the next one
-  run_structures.run_and_save("/path/to/folder","path/to/output_folder", "struct_10x10x4_n",x_dim,y_dim,z_dim,num_structs,time_limit)
+  run_structures.run_and_save("/path/to/folder","path/to/output_folder", structure_prefix,x_dim,y_dim,z_dim,num_structs,time_limit)
 ```
