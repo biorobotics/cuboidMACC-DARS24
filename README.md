@@ -8,6 +8,8 @@ Recent work in planning for cooperative mobile robots to assemble a structure mu
 A conda environment.yml is provided. Requires numpy, scipy, numba, networkx, pyyaml. Saving and loading data files require dill. Visualizations require matplotlib, meshcat, trimesh, and plotly.
 
 The C++ extension modules use pybind11, which you will need to install: https://pybind11.readthedocs.io/en/stable/
+
+The C++ extension modules also use boost, specifically MultiArray, which will need to be installed: https://www.boost.org/
 ## Compilation
 The high level planner relies on a compiled extension module to compute reachable abstract actions. The source code is in src/assembly/cpp. A Makefile is provided. 
 
