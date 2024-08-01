@@ -11,7 +11,7 @@ from scipy import optimize
 from typing import List,Dict,MutableSet,Tuple
 from collections import defaultdict
 
-from assembly import  block_utils,problem_node,search_algo
+from assembly import block_utils,problem_node,search_algo
 from path import cbs
 from utility import timing,exceptions
 

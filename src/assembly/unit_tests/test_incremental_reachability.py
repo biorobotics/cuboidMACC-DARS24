@@ -1,4 +1,4 @@
-import block_utils
+import assembly.block_utils
 
 def test_incremental(start_grid,action_sequence):
     """

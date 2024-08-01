@@ -6,11 +6,10 @@ import yaml
 from math import fabs
 from itertools import combinations,product,chain
 from copy import deepcopy,copy
-from a_star import AStar
+from path.a_star import AStar
 import time
 import math
 import random
-from lookup_conflict import overlap_edges, overlap_vertices
 import timeit
 from assembly import block_utils
 import numpy as np

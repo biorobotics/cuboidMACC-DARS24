@@ -1,7 +1,7 @@
 import heapq
 from itertools import count
 import timeit
-import block_utils
+from assembly import block_utils
 from utility.exceptions import *
 
 TIMEOUT="TIMEOUT"

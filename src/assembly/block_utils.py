@@ -8,7 +8,7 @@ from itertools import product,combinations
 from collections import defaultdict
 from typing import MutableSet,DefaultDict,Tuple,List,Iterable,FrozenSet
 import copy
-from cpp import reachability
+from assembly.cpp import reachability
 
 import random
 global x_dim, y_dim, z_dim

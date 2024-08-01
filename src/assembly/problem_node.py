@@ -2,12 +2,11 @@ import numpy as np
 import os
 import time
 import math
-import block_utils
+from . import block_utils
 import pdb
-from cpp import reachability
+from assembly.cpp import reachability
 from typing import Dict,MutableSet,Tuple
 from collections import defaultdict
-import scaffold_estimation
 
 def return_list_with_m1():
     return [-1]
@@ -345,10 +344,10 @@ class Assembly_Node:
                     need_removal.append(action)
         return need_removal
     
-    def icra_estimate_required_scaffolding_actions(self,goal):
-        if self.reachability.occupancy_grid is None:
-            self.reachability.occupancy_grid = reachability.occupancy_grid(self.state,self.x_dim,self.y_dim,self.z_dim)
-        return 2*scaffold_estimation.estimate_missing_scaffolding(self.reachability.occupancy_grid,goal.reachability.occupancy_grid)
+    # def icra_estimate_required_scaffolding_actions(self,goal):
+    #     if self.reachability.occupancy_grid is None:
+    #         self.reachability.occupancy_grid = reachability.occupancy_grid(self.state,self.x_dim,self.y_dim,self.z_dim)
+    #     return 2*scaffold_estimation.estimate_missing_scaffolding(self.reachability.occupancy_grid,goal.reachability.occupancy_grid)
     def get_heuristic(self, goal):
         h = h2 = 0
         blocks_to_be_placed = []

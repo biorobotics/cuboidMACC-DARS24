@@ -140,4 +140,4 @@ dependencies:
       - tenacity==8.2.3
       - trimesh==4.2.0
       - u-msgpack-python==2.8.0
-prefix: /home/ggutow/miniconda3/envs/macc
+prefix: /home/miniconda3/envs/macc

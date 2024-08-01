@@ -1,0 +1,6 @@
+structure_prefix: struct_10x10x4_n
+world_size: (10,10,5)
+time_limit: 1000
+function: interface.solve_assembly_problem_using_rounds
+commit: 786b8cb3509caf86bfb03b64eb11dad7e1532afc main
+structures: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
